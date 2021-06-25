@@ -1,12 +1,8 @@
-import warnings
 import time
 import numpy as np
 import pygmo as pg
 from utils.sms_ego_functions import *
 from utils.sampling import *
-
-
-warnings.filterwarnings("ignore")
 
 
 def E_SMS_EGO(problem, eval_budget, time_budget):

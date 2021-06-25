@@ -2,6 +2,9 @@ from E_sms_ego import E_SMS_EGO
 from pymoo.factory import get_problem, get_performance_indicator
 import numpy as np
 import pandas as pd
+import warnings
+
+warnings.filterwarnings("ignore")
 np.random.seed(110)
 
 def E_SMS_EGO_mean_HV (problems, iterations):
