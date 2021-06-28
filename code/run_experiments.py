@@ -21,7 +21,7 @@ def E_SMS_EGO_mean_HV (problems, iterations):
             else:
                 hv = 0
             results.append((j[0], res[0].tolist(), res[1].tolist(), hv, j[1].tolist()))
-            respath = 'results/E_SMS_EGO_intermediate_run_' + str(i) + '.csv'
+            respath = 'results/E_SMS_EGO_run_' + str(i) + '.csv'
             pd.DataFrame(results).to_csv(respath,
                                                   header=('problem', 'x', 'y', 'hv', 'ref'),
                                                   index=False)
@@ -41,11 +41,9 @@ def E_SMS_EGO_mean_HV (problems, iterations):
 
 
 problems = (('bnh', np.array([140, 50])),
-            ('osy', np.array([0, 386])),
             ('tnk', np.array([2, 2])),
             ('ctp1', np.array([1, 2])),
             ('zdt4', np.array([1, 260])),
-            ('mw1', np.array([2, 25])),
             ('kursawe', np.array([-20,2])),
             ('welded_beam', np.array([350, 0.1])),
             ('carside', np.array([42, 4.5, 13])))
